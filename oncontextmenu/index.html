@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>oncontextmenu</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: "microsoft yahei";
+		}
+		ul{
+			list-style: none;
+		}
+
+		#right{
+			position: relative;
+			background: #F5F5F5;
+			border-radius: 5px;
+			border: 1px solid #E3E3E3;
+			padding: 48px 42px;
+			font-size: 40px;
+			font-weight: 300;
+		}
+		#menu{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+			width: 400px;
+			box-sizing: border-box;
+			background: #F5F5F5;
+			border-radius: 5px;
+			border: 1px solid #E3E3E3;
+			padding: 10px 40px;
+		}
+		#menu>li{
+			font-weight: 300;
+			font-size: 40px;
+			padding: 20px 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="right">
+		right click to see the menu
+		<ul id="menu">
+			<li>Menu Item 1</li>
+			<li>Menu Item 2</li>
+		</ul>
+	</div>
+	
+	<script type="text/javascript">
+		document.oncontextmenu = function(e){
+			//e.preventDefault();
+			var ev = ev||window.event;
+			var menu = 	document.getElementById("menu");
+			var x = document.body.clientWidth || document.documentElement.clientWidth;
+			var y = document.body.clientHeight || document.documentElement.clientHeight;
+			if(e.target.id=="right"){  
+				var left=ev.clientX;  
+				var top=ev.clientY; 
+				if(left+400>x){
+					menu.style.left=left-400+'px';
+				}else{
+					menu.style.left=left+'px';		
+				}
+				menu.style.top=top+'px';
+				menu.style.display="block"; 
+			}else{
+				menu.style.display="none";
+			}
+			return false; 
+		}
+	</script>
+</body>
+</html>
