@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三栏式布局</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			padding: 20px;
+		}
+		.container{
+			padding: 20px;
+			background: #eee;
+			border: 1px solid #999;
+		}
+		.right{
+			width: 120px;
+			float: right;
+			background: #fff;
+			padding: 20px;
+			box-sizing: border-box;
+			border: 1px solid #999;
+		}
+		.left{
+			float: left;
+			width: 200px;
+			padding: 20px;
+			box-sizing: border-box;
+			border: 1px solid #999;
+			background: #fff;
+		}
+		.center{
+			margin: 0 140px 0 220px;
+			border: 1px solid #999;
+			background: #fff;
+			padding: 20px;
+		}
+		h2{
+			font-weight: normal;
+			font-size: 16px;
+			margin: 20px 0;
+		}
+		.teamLogo{
+			float: left;
+		}
+		.teamLogo,.presonLogo{
+			width: 80px;
+			height: 80px;
+			border: 1px solid #999;
+			background: #eee;
+		}
+		.presonLogo{
+			margin-bottom: 20px;
+		}
+		.presonLogo:last-child{
+			margin-bottom: 0px;
+		}
+		.content{
+			text-indent: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="right">
+			<div class="presonLogo">
+				
+			</div>
+			<div class="presonLogo">
+				
+			</div>
+			<div class="presonLogo">
+				
+			</div>
+			<div class="presonLogo">
+				
+			</div>
+		</div>
+		<div class="left">
+			<div class="teamLogo">
+				团队logo
+				80X80
+			</div>
+			<div class="content">
+				团队名称
+			</div>
+		</div>
+		<div class="center">
+			<h2>关于你们团队的介绍</h2>
+			<p>可以给我们解释一下团队名称的来历，或是分别介绍你们团队成员。</p>
+			<h2>以下为实例</h2>
+			<p>百度（纳斯达克：BIDU），全球最大的中文搜索引擎、最大的中文网站。1999年底,身在美国硅谷的李彦宏看到了中国互联网及中文搜索引擎服务的巨大发展潜力，抱着技术改变世界的梦想，他毅然辞掉硅谷的高薪工作，携搜索引擎专利技术，于 2000年1月1日在中关村创建了百度公司。</p>
+			<h2>2017春季班概述</h2>
+			<p>作为一家以技术为信仰的高科技公司，百度将技术创新作为立身之本，着力于互联网核心技术突破与人才培养，在搜索、人工智能、云计算、大数据等技术领域处于全球领先水平。百度认为，互联网发展正迎来第三幕——人工智能，这也是百度重要的技术战略方向。百度建有世界一流的研究机构——百度研究院，广揽海内外顶尖技术英才，致力于人工智能等相关前沿技术的研究与探索，着眼于从根本上提升百度的信息服务水平。目前，百度人工智能研究成果已全面应用于百度产品，让数亿网民从中受益;同时，百度还将语音、图像、机器翻译等难度高、投入大的领先技术向业界开放，以降低大众创业、万众创新的门槛，进一步释放创业创新活力。</p>
+		</div>
+	</div>
+</body>
+</html>
